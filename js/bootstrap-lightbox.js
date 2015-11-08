@@ -163,9 +163,9 @@
 		preloader = new Image();
 		preloader.onload = function()
 		{
-			//$image.width = preloader.width;
-			//$image.height = preloader.height;
-			//return _this.sizeContainer(preloader.width, preloader.height);
+			// $image.width = preloader.width;
+			// $image.height = preloader.height;
+			// return _this.sizeContainer(preloader.width, preloader.height);
 
 			// The image could be bigger than the window, that is an issue.
 			if( (preloader.width + padLeft + padRight) >= windowWidth)
@@ -193,8 +193,8 @@
 				'margin-left' : -1 * (preloader.width + padLeft + padRight) / 2
 			});
 			that.$element.find('.lightbox-content').css({
-				'width': preloader.width,
-				'height': preloader.height
+				'width': preloader.width + padLeft + padRight + 2,
+				'height': preloader.height + padTop + padBottom + 2
 			});
 
 			// We have everything sized!
